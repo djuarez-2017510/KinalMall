@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteCliente" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="4708dfc4-2112-4a30-9bea-bef84e2669bc">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="Descrip" class="java.lang.String">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[select * from tipoCliente inner join Clientes
+	on tipoCliente.codigoTipoCliente = Clientes.codigoTipoCliente
+	where tipoCliente.descripcion =  $P{Descrip}]]>
+	</queryString>
+	<field name="codigoTipoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="descripcion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoCliente" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="nombresCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="apellidosCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefonoCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccionCliente" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="email" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoLocal" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="752" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="572" height="752" backcolor="#2F9DAA" uuid="f1504416-71e0-441f-9b22-657c296392bd"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="57" splitType="Stretch">
+			<rectangle>
+				<reportElement x="162" y="12" width="234" height="33" backcolor="#DAF5FF" uuid="3eb1f6f0-8b59-4ccd-836c-9b6aa870860d"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="208" y="12" width="141" height="33" forecolor="#000000" backcolor="#F0A52D" uuid="7a8c7d45-090e-418d-a0bd-0a90c0593797"/>
+				<textElement>
+					<font fontName="Bitsumishi" size="30" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Clientes]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="396" y="24" width="176" height="10" backcolor="#F1FFFF" uuid="2c7234b0-f464-4ffd-a322-4bbcc46f1f0c"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="0" y="24" width="162" height="10" backcolor="#F1FFFF" uuid="95be9505-01ac-40d0-b515-1363ee42b0c1"/>
+			</rectangle>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="41" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="27" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="2" width="572" height="25" forecolor="#F29623" backcolor="#F29623" uuid="d264e084-0e44-41f2-a0fc-9e4735572954"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="23" y="7" width="88" height="20" backcolor="#F4AB4E" uuid="b6860b86-660f-4300-bee4-cada1cb24027"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="14"/>
+				</textElement>
+				<text><![CDATA[codigoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="139" y="7" width="100" height="20" backcolor="#F4AB4E" uuid="8dc3a3d6-127a-4536-96fe-9c030e02db99"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="14"/>
+				</textElement>
+				<text><![CDATA[nombresCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="249" y="7" width="100" height="20" backcolor="#F4AB4E" uuid="231ff902-507d-47fa-a60f-a57dd0e6bda8"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="14"/>
+				</textElement>
+				<text><![CDATA[apellidosCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="362" y="7" width="100" height="20" backcolor="#F4AB4E" uuid="0532ea24-e33c-4d8e-b440-a3ab960feb88"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="14"/>
+				</textElement>
+				<text><![CDATA[telefonoCliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="472" y="7" width="72" height="20" backcolor="#F4AB4E" uuid="5541f7b1-0df3-4ebb-adf7-0bcdf39089ee"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="14"/>
+				</textElement>
+				<text><![CDATA[descripcion]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="38" splitType="Stretch">
+			<textField>
+				<reportElement x="23" y="10" width="100" height="20" forecolor="#FFFFFF" uuid="1b987572-b90b-4c19-b76b-079ae3f1f9f9"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="139" y="10" width="100" height="20" forecolor="#FFFFFF" uuid="2ec49fbf-c844-497e-a66f-f2134c3239ea"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nombresCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="249" y="10" width="100" height="20" forecolor="#FFFFFF" uuid="288c1663-04ba-4d5b-ba88-c3f1948a1fae"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{apellidosCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="362" y="10" width="100" height="20" forecolor="#FFFFFF" uuid="85c74e0c-ba73-4b17-81af-5e49202746c9"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="14"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefonoCliente}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="462" y="10" width="110" height="20" forecolor="#FFFFFF" uuid="e3be04a2-cb18-4ee3-99c0-6601668215eb"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="10" isBold="false"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{descripcion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="157" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="134" width="572" height="10" backcolor="#F1FFFF" uuid="2cef9115-2f45-465d-9aa3-4852421a7638"/>
+			</rectangle>
+			<image>
+				<reportElement x="396" y="14" width="176" height="101" uuid="bd6438cc-c8fe-46c3-a2be-09d9f25aae51"/>
+				<imageExpression><![CDATA["C:\\Users\\hp18la\\Desktop\\Logopequess.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="61" splitType="Stretch">
+			<rectangle>
+				<reportElement x="0" y="19" width="572" height="33" backcolor="#DAF5FF" uuid="b59b78e6-47d5-4709-9408-ce0a89cdba77"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Transparent" x="298" y="31" width="274" height="21" forecolor="#000000" backcolor="#F0A52D" uuid="abcdc9be-6217-4196-9c51-a3ae311c9ef1"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Black" size="14" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
+				</textElement>
+				<text><![CDATA[Daniel Oswaldo Juarez Herrera]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="25" splitType="Stretch"/>
+	</summary>
+</jasperReport>

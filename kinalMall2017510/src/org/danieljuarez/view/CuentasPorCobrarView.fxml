@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1125.0" style="-fx-background-color: #D4D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.CuentasPorCobrarController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="200.0" style="-fx-background-color: #2f9daa;">
+         <children>
+            <Pane layoutX="21.0" prefHeight="132.0" prefWidth="161.0" style="-fx-background-color: #49cdd1; -fx-background-radius: 0 0 30 30;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="33.0" prefHeight="85.0" prefWidth="104.0" style="-fx-background-color: #82F0DC; -fx-background-radius: 80 80 80;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/CuentaPorCobrar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="1.0" layoutY="-5.0" prefHeight="38.0" prefWidth="159.0" text="Cuentas Por Cobrar">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="1.0" layoutY="216.0" prefHeight="234.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Nuevo" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevoLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Eliminar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/borrarLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Editar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/EditarLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Reporte" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporteLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="201.0" prefHeight="140.0" prefWidth="924.0" style="-fx-background-color: F68F22;">
+         <children>
+            <AnchorPane layoutX="862.0" layoutY="14.0" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: #84CBC2; -fx-background-radius: 30 30 30;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="11.0" layoutY="4.0" onMouseClicked="#ventanaLocales" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flecha.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <GridPane layoutX="14.0" layoutY="14.0" prefHeight="101.0" prefWidth="834.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="94.0" text="Código C. C.">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="No. Factura" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Año" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Mes" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Valor Neto Pago" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Estado de Pago" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Código Admin." GridPane.rowIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Código Clientes" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="162.0" text="Código Locales" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoCuentasCobrar" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtNoFactura" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="3" />
+                  <TextField fx:id="txtAnio" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="5" />
+                  <TextField fx:id="txtMes" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtValorNetoPago" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtEstadoPago" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cmbCodigoClientes" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbCodigoAdmin" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbCodigoLocales" prefHeight="25.0" prefWidth="168.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblCuentasPorCobrar" layoutX="233.0" layoutY="160.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="276.0" prefWidth="872.0" stylesheets="@../resource/ObjectMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCC" prefWidth="86.0" text="Codigo C.C." />
+          <TableColumn fx:id="colNoFactura" prefWidth="85.0" text="No. Factura" />
+            <TableColumn fx:id="colAnio" prefWidth="61.0" text="Año" />
+            <TableColumn fx:id="colMes" prefWidth="68.0" text="Mes" />
+            <TableColumn fx:id="colValorNetoPago" prefWidth="114.0" text="Valor Neto Pago" />
+            <TableColumn fx:id="colEstadoPago" prefWidth="109.0" text="Estado de Pago" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="109.0" text="Código Admin." />
+            <TableColumn fx:id="colCodigoCliente" prefWidth="115.0" text="Código Clientes" />
+            <TableColumn fx:id="colCodigoLocal" prefWidth="124.0" text="Código Locales" />
+        </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="filler" />
+            <String fx:value="label" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>

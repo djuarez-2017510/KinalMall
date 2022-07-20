@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReportAdministracion" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3bf45f88-02ec-4753-9bbc-9e6e80d38a88">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="144"/>
+	<queryString>
+		<![CDATA[call sp_ListarAdministracion();]]>
+	</queryString>
+	<field name="codigoAdministracion" class="java.lang.Integer">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="direccion" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="telefono" class="java.lang.String">
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<background>
+		<band height="802" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="802" backcolor="#2F9DAA" uuid="daff2bd3-f010-4fca-b967-d1ae93958037"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="11" y="0" width="22" height="802" forecolor="#006666" backcolor="#F67C00" uuid="a375c648-627b-449a-9108-762031784239"/>
+			</rectangle>
+			<rectangle>
+				<reportElement x="43" y="0" width="5" height="802" forecolor="#006666" backcolor="#F67C00" uuid="9b0f7556-1f1b-4fc6-ae47-14f3141a5c70"/>
+			</rectangle>
+		</band>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="48" y="28" width="368" height="33" forecolor="#006666" backcolor="#F67C00" uuid="3ea2c6f0-a04a-45a0-b306-24784c6967c6"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="86" y="28" width="180" height="33" uuid="3d869062-3762-477f-b747-378b20a53038"/>
+				<textElement>
+					<font fontName="Bitsumishi" size="22"/>
+				</textElement>
+				<text><![CDATA[Administracion]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<rectangle>
+				<reportElement x="86" y="0" width="428" height="20" forecolor="#FF9933" backcolor="#FF9933" uuid="b647f5c4-87e0-4d49-a6ad-211ce97665e0"/>
+			</rectangle>
+			<staticText>
+				<reportElement mode="Opaque" x="101" y="0" width="147" height="20" backcolor="#FF9933" uuid="b69a5a43-6d77-40a1-ba6b-e008c023b06f"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[codigoAdministracion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="248" y="0" width="133" height="20" backcolor="#FF9933" uuid="979c9705-b974-48b1-873b-86fca63c77d5"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[direccion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="391" y="0" width="123" height="20" forecolor="#000000" backcolor="#FF9933" uuid="dada15e0-3330-4f7c-aec5-cb294a34c657"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[telefono]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement mode="Transparent" x="101" y="0" width="147" height="27" forecolor="#FFFFFF" backcolor="#CCFFFF" uuid="51c4272b-55cb-49dd-bb35-87f2d216f4ab"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{codigoAdministracion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="248" y="0" width="133" height="27" forecolor="#FFFFFF" backcolor="#CCFFFF" uuid="052c7707-9ec9-4e7c-84ec-9fb08d06434a"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{direccion}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement mode="Transparent" x="391" y="0" width="123" height="27" forecolor="#FFFFFF" backcolor="#CCFFFF" uuid="963dac42-efca-482d-a00f-8e24cdc2f592"/>
+				<textElement>
+					<font fontName="Helvetica LT Std Light" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{telefono}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="216" splitType="Stretch">
+			<image>
+				<reportElement x="368" y="111" width="176" height="105" uuid="0f5994df-3de0-4127-862a-9e8a8f50df63"/>
+				<imageExpression><![CDATA["C:\\Users\\hp18la\\Documents\\NetBeansProjects\\kinalMall2017510\\src\\org\\danieljuarez\\images\\Logopequess.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="81" splitType="Stretch">
+			<rectangle>
+				<reportElement mode="Opaque" x="194" y="53" width="361" height="28" forecolor="#58B0BB" backcolor="#58B0BB" uuid="7392fec0-b8b0-4b5a-bf40-0f8e462e8d7e"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="230" y="55" width="325" height="26" uuid="7e9712d1-1b6d-4bea-94a0-76e24ba616e8"/>
+				<textElement>
+					<font fontName="Helvetica LT Std" size="18" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Daniel Oswaldo Juarez Herrera]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

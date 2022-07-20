@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="745.0" style="-fx-background-color: #D4D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.CargosController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="201.0" style="-fx-background-color: #2f9daa;">
+         <children>
+            <Pane layoutX="21.0" prefHeight="132.0" prefWidth="161.0" style="-fx-background-color: #49cdd1; -fx-background-radius: 0 0 30 30;">
+               <children>
+                  <AnchorPane layoutX="24.0" layoutY="33.0" prefHeight="85.0" prefWidth="104.0" style="-fx-background-color: #82F0DC; -fx-background-radius: 80 80 80;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="12.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Cargos.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="46.0" layoutY="-5.0" prefHeight="38.0" prefWidth="60.0" text="Cargos">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutX="2.0" layoutY="140.0" prefHeight="213.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Nuevo" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevoLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Eliminar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/borrarLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Editar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/EditarLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Reporte" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporteLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Button alignment="BASELINE_LEFT" layoutX="2.0" layoutY="353.0" mnemonicParsing="false" onAction="#ventanaEmpleados" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Empleados" textFill="#de713e">
+               <font>
+                  <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="201.0" prefHeight="97.0" prefWidth="545.0" style="-fx-background-color: F68F22;">
+         <children>
+            <GridPane layoutX="14.0" layoutY="34.0" prefHeight="30.0" prefWidth="456.0">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="123.0" minWidth="10.0" prefWidth="104.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="165.0" minWidth="10.0" prefWidth="139.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label prefHeight="22.0" prefWidth="94.0" text="Código Cargo">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label prefHeight="22.0" prefWidth="99.0" text="Nombre Cargo" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoCargo" editable="false" prefHeight="25.0" prefWidth="160.0" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtNombreCargo" editable="false" prefHeight="25.0" prefWidth="154.0" GridPane.columnIndex="3" />
+               </children>
+            </GridPane>
+            <AnchorPane layoutX="479.0" layoutY="15.0" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: #84CBC2; -fx-background-radius: 30 30 30;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="11.0" layoutY="4.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flecha.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblCargos" layoutX="221.0" layoutY="118.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="264.0" prefWidth="499.0" stylesheets="@../resource/ObjectMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCargo" prefWidth="163.0" text="Codigo Cargo" />
+          <TableColumn fx:id="colNombreCargo" prefWidth="335.0" text="Nombre Cargo" />
+        </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="filler" />
+            <String fx:value="label" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>

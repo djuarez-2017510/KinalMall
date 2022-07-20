@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: #2f9daa;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.LoginController">
+   <children>
+      <ImageView fitHeight="80.0" fitWidth="107.0" layoutX="14.0" layoutY="308.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/Logopeque.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="132.0" layoutY="350.0" prefHeight="19.0" prefWidth="344.0" text="Todo lo que deseas lo encuentras aqui ">
+         <font>
+            <Font name="HelveticaLTStd-BlkCond" size="21.0" />
+         </font>
+      </Label>
+      <Pane layoutY="397.0" prefHeight="3.0" prefWidth="500.0" style="-fx-background-color: F68F22;" />
+      <Pane layoutY="385.0" prefHeight="3.0" prefWidth="500.0" style="-fx-background-color: F68F22;" />
+      <TextField fx:id="txtUsuario" layoutX="176.0" layoutY="95.0" promptText="Usuario" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: F68F22;" />
+      <Label layoutX="176.0" layoutY="14.0" prefHeight="37.0" prefWidth="149.0" text="Inicio de sesión" textFill="#d0fff9">
+         <font>
+            <Font name="HelveticaLTStd-BoldCond" size="23.0" />
+         </font>
+      </Label>
+      <Button fx:id="btnIniciarSesion" layoutX="207.0" layoutY="209.0" mnemonicParsing="false" onAction="#Login" style="-fx-background-color: #82F0DC;" text="Iniciar Sesión" />
+      <Hyperlink layoutX="206.0" layoutY="285.0" onMouseClicked="#ventanaUsuario" text="Registrate aquí" textFill="#ffb348" />
+      <PasswordField fx:id="txtContrasena" layoutX="176.0" layoutY="159.0" promptText="Contraseña" style="-fx-background-color: transparent; -fx-border-width: 0px 0px 2px 0px; -fx-border-color: F68F22;" />
+   </children>
+</AnchorPane>

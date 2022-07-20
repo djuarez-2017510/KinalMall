@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="660.0" style="-fx-background-color: #D4D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.UsuarioController">
+   <children>
+      <AnchorPane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #2f9daa;">
+         <children>
+            <Pane layoutX="36.0" prefHeight="132.0" prefWidth="129.0" style="-fx-background-color: #49cdd1; -fx-background-radius: 0 0 30 30;">
+               <children>
+                  <AnchorPane layoutX="13.0" layoutY="40.0" prefHeight="85.0" prefWidth="104.0" style="-fx-background-color: #82F0DC; -fx-background-radius: 80 80 80;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="12.0" layoutY="15.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/Usuario.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="34.0" prefHeight="38.0" prefWidth="66.0" text="Usuario">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutY="200.0" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Nuevo" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevoLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#cancelar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Cancelar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/cancelar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" prefHeight="52.0" prefWidth="460.0" style="-fx-background-color: F68F22;">
+         <children>
+            <Label layoutX="18.0" layoutY="1.0" prefHeight="43.0" prefWidth="225.0" text="Ingrese sus datos" textFill="WHITE">
+               <font>
+                  <Font name="HelveticaLTStd-Cond" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="654.0" prefHeight="400.0" prefWidth="12.0" style="-fx-background-color: F68F22;" />
+      <GridPane layoutX="230.0" layoutY="65.0" prefHeight="270.0" prefWidth="366.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="178.0" minWidth="10.0" prefWidth="141.0" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="225.0" minWidth="10.0" prefWidth="225.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label prefHeight="33.0" prefWidth="121.0" text="Nombre Usuario">
+               <font>
+                  <Font name="HelveticaLTStd-Cond" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="29.0" prefWidth="118.0" text="Apellido Usuario" GridPane.rowIndex="1">
+               <font>
+                  <Font name="HelveticaLTStd-Cond" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="36.0" prefWidth="84.0" text="Usuario" GridPane.rowIndex="2">
+               <font>
+                  <Font name="HelveticaLTStd-Cond" size="16.0" />
+               </font>
+            </Label>
+            <Label prefHeight="43.0" prefWidth="102.0" text="Contraseña" GridPane.rowIndex="3">
+               <font>
+                  <Font name="HelveticaLTStd-Cond" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNombreUsuario" prefHeight="30.0" prefWidth="225.0" GridPane.columnIndex="1" />
+            <TextField fx:id="txtApellidoUsuario" prefHeight="30.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <TextField fx:id="txtUsuario" prefHeight="30.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+            <TextField fx:id="txtContra" prefHeight="30.0" prefWidth="225.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+         </children>
+      </GridPane>
+   </children>
+</AnchorPane>

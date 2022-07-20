@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="450.0" prefWidth="1315.0" style="-fx-background-color: #D4D3D3;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.danieljuarez.controller.ClientesController">
+   <children>
+      <AnchorPane prefHeight="450.0" prefWidth="200.0" style="-fx-background-color: #2f9daa;">
+         <children>
+            <Pane layoutX="36.0" prefHeight="132.0" prefWidth="129.0" style="-fx-background-color: #49cdd1; -fx-background-radius: 0 0 30 30;">
+               <children>
+                  <AnchorPane layoutX="13.0" layoutY="40.0" prefHeight="85.0" prefWidth="104.0" style="-fx-background-color: #82F0DC; -fx-background-radius: 80 80 80;">
+                     <children>
+                        <ImageView fitHeight="85.0" fitWidth="80.0" layoutX="12.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/clientes.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <Label layoutX="34.0" prefHeight="38.0" prefWidth="66.0" text="Clientes">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="20.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <VBox layoutY="210.0" prefHeight="234.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#nuevo" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Nuevo" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/nuevoLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#eliminar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Eliminar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/borrarLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#editar" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Editar" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/EditarLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" alignment="BASELINE_LEFT" mnemonicParsing="false" onAction="#reporte" prefHeight="32.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/ObjectMall2021.css" text="Reporte" textFill="#de713e">
+                     <font>
+                        <Font name="HelveticaLTStd-BlkObl" size="19.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/reporteLogo.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="200.0" prefHeight="140.0" prefWidth="1115.0" style="-fx-background-color: F68F22;">
+         <children>
+            <GridPane layoutX="16.0" layoutY="14.0" prefHeight="90.0" prefWidth="960.0">
+              <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.0" minWidth="10.0" prefWidth="103.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="295.0" minWidth="10.0" prefWidth="168.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="257.0" minWidth="10.0" prefWidth="124.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="281.0" minWidth="10.0" prefWidth="225.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="181.0" minWidth="10.0" prefWidth="121.0" />
+                <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="211.0" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label text="Código Local" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Nombres Cliente" GridPane.columnIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Telefono Cliente" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Dirección" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Código Admin." GridPane.columnIndex="2" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Apellidos Cliente" GridPane.columnIndex="4">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Email" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Código Cliente">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="16.0" />
+                     </font>
+                  </Label>
+                  <Label text="Código Tipo Cliente" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                     <font>
+                        <Font name="HelveticaLTStd-Cond" size="14.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="txtCodigoCliente" editable="false" GridPane.columnIndex="1" />
+                  <TextField fx:id="txtTelefonoCliente" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtNombresCliente" editable="false" GridPane.columnIndex="3" />
+                  <TextField fx:id="txtDireccionCliente" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                  <TextField fx:id="txtApellidosCliente" editable="false" GridPane.columnIndex="5" />
+                  <TextField fx:id="txtEmail" editable="false" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                  <ComboBox fx:id="cmbCodigoLocal" prefHeight="25.0" prefWidth="167.0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbCodigoAdministracion" prefHeight="25.0" prefWidth="224.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                  <ComboBox fx:id="cmbCodigoTipoCliente" prefHeight="25.0" prefWidth="211.0" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+               </children>
+            </GridPane>
+            <AnchorPane layoutX="1034.0" layoutY="14.0" prefHeight="38.0" prefWidth="52.0" style="-fx-background-color: #84CBC2; -fx-background-radius: 30 30 30;">
+               <children>
+                  <ImageView fitHeight="30.0" fitWidth="40.0" layoutX="11.0" layoutY="4.0" onMouseClicked="#ventanaTipoCliente" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/flecha.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <TableView fx:id="tblClientes" layoutX="209.0" layoutY="149.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="290.0" prefWidth="1103.0" stylesheets="@../resource/ObjectMall2021.css">
+        <columns>
+          <TableColumn fx:id="colCodigoCliente" text="Cod. Cliente" />
+          <TableColumn fx:id="colNombresCliente" prefWidth="148.0" text="Nombres Cliente" />
+            <TableColumn fx:id="colApellidosCliente" prefWidth="152.0" text="Apellidos Cliente" />
+            <TableColumn fx:id="colTelefonoCliente" prefWidth="83.0" text="Tel. Cliente" />
+            <TableColumn fx:id="colDireccionCliente" prefWidth="220.0" text="Dirección" />
+            <TableColumn fx:id="colEmail" prefWidth="136.0" text="Email" />
+            <TableColumn fx:id="colCodigoLocal" text="Cod. Local" />
+            <TableColumn fx:id="colCodigoAdministracion" prefWidth="81.0" text="Cod. Admin." />
+            <TableColumn fx:id="colCodigoTipoCliente" prefWidth="122.0" text="Cod. Tipo Cliente" />
+        </columns>
+         <styleClass>
+            <String fx:value="column-header" />
+            <String fx:value="filler" />
+            <String fx:value="label" />
+            <String fx:value="table-cell" />
+            <String fx:value="table-row-cell" />
+            <String fx:value="table-view" />
+         </styleClass>
+      </TableView>
+   </children>
+</AnchorPane>
